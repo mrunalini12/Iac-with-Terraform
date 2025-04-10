@@ -1,50 +1,46 @@
-# Task 3: Infrastructure as Code (IaC) with Terraform
+# Task 3: Infrastructure as Code (IaC) with Terraform 🚀
 
-## Objective
-Provision a local Docker container using Terraform.
+## 📌 Objective
+Provision a local **Docker container** using **Terraform**.
 
-## Tools Used
-- Terraform
-- Docker
+---
 
-## Steps Performed
+## 🔧 Tools Used
+- **Terraform**
+- **Docker**
+- OS: Ubuntu/Linux
 
-1. **Terraform Initialization**
+---
+
+## 📁 Files
+- `main.tf` – Terraform configuration for Docker image & container
+- `execution-logs/` – Folder with logs for `init`, `plan`, `apply`, `state`, and `docker ps`
+
+---
+
+## ⚙️ How to Run
+
+1. **Initialize Terraform**
    ```bash
-   terraform init
+   terraform init | tee execution-logs/terraform-init.txt
 
-2.Execution Plan
-terraform plan
+terraform plan -out=tfplan.binary | tee execution-logs/terraform-plan.txt
 
-3.Apply Infrastructure
-terraform apply
+terraform apply tfplan.binary
 
-Check Terraform State
-terraform state list
+terraform state list | tee execution-logs/terraform-state.txt
 
-Check Running Container
-docker ps
+terraform state list | tee execution-logs/terraform-state.txt
 
+docker ps | tee execution-logs/docker-ps.txt
 
-Destroy Infrastructure
 terraform destroy
 
+**Files Included**
 
-Logs
+1.main.tf
 
-All Terraform command logs are stored in the execution-logs/ directory:
-
-terraform-init.txt
-
-terraform-plan.txt
-
-terraform-state.txt
-
-docker-ps.txt
+2.execution-logs/ (contains all logs)
 
 
 
-
-
-Output
-Successfully created and destroyed a Docker container (nginx-container) using Terraform.
