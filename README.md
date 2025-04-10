@@ -13,27 +13,25 @@ Provision a local Docker container using Terraform.
    ```bash
    terraform init
 
-Execution Plan
-
-bash
+2.Execution Plan
 terraform plan
-Apply Infrastructure
 
-bash
+3.Apply Infrastructure
 terraform apply
+
 Check Terraform State
-
-bash
 terraform state list
+
 Check Running Container
-
-bash
 docker ps
-Destroy Infrastructure
 
-bash
+
+Destroy Infrastructure
 terraform destroy
+
+
 Logs
+
 All Terraform command logs are stored in the execution-logs/ directory:
 
 terraform-init.txt
@@ -43,6 +41,10 @@ terraform-plan.txt
 terraform-state.txt
 
 docker-ps.txt
+
+
+
+
 
 Output
 Successfully created and destroyed a Docker container (nginx-container) using Terraform.
