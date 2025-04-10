@@ -1,0 +1,12 @@
+# Terraform files
+*.tfstate
+*.tfstate.backup
+.terraform/
+terraform.tfvars
+tfplan.binary
+
+# Logs
+execution-logs/
+
+# System files
+.DS_Store
